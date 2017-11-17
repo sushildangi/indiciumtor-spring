@@ -63,6 +63,14 @@ public class IndexController {
                     .rejectValue("email", "error.user",
                             "There is already a user registered with the email provided");
         }
+        if (!user.getPassword().equals(user.getConfirmPassword())) {
+            bindingResult
+                    .rejectValue("password", "error.user",
+                            "Password mismatch");
+            user.setConfirmPassword("");
+            user.setPassword("");
+
+        }
         if (bindingResult.hasErrors()) {
             modelAndView.setViewName("/auth/registration");
         } else {

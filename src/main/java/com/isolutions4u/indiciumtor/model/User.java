@@ -17,8 +17,8 @@ public class User {
 
     @Column(name = "first_name")
     @NotBlank(message = "First Name is required")
-    @Size(min = 4, message = "Minimum Length is Four Character")
-    @Pattern(regexp = "^[A-Za-z]+$", message = "Use letters only please")
+    @Size(min = 3, message = "Minimum Length is Three Character")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Use Alphabet only please")
     private String firstName;
 
     @Column(name = "last_name")
@@ -27,6 +27,8 @@ public class User {
 
     @Column(name = "phone")
     @NotBlank(message = "Please Enter Phone Number!")
+    @Size(min = 10, max = 10, message = "Enter 10 digit only")
+    @Pattern(regexp = "^[789]\\d{9}$", message = "Please Enter correct Mobile Number!")
     private String phone;
 
     @Column(name = "email")
@@ -38,6 +40,7 @@ public class User {
     private String password;
 
     @Transient
+    @NotBlank(message = "Re-Enter Password")
     private String confirmPassword;
 
     @Column(name = "role")
