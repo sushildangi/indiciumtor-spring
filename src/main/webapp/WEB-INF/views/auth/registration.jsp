@@ -19,7 +19,7 @@
 <div class="log">
     <div class="content2 w3agile">
         <h2>Sign Up</h2>
-        <sf:form action="${contextRoot}/registration" method="post" modelAttribute="user">
+        <sf:form action="${contextRoot}/registration" method="post" modelAttribute="user" autocomplete="false">
 
             <div class="form-group">
                 <div class="test1">
@@ -107,11 +107,11 @@
 
             <input type="submit" class="register" value="Sign Up">
         </sf:form>
-        <h3>Already have an account? <a href="#">Sign In</a></h3>
+        <h3>Already have an account? <a href="${contextRoot}/login">Sign In</a></h3>
     </div>
 </div>
 <div class="footer">
-    <p>© 2017 Indicium Tor Registration Form. All Rights Reserved | Design by <a href="http://isolutions4u.com/" target="_blank">isolutions4u</a>
+    <p>&copy; 2017 Indicium Tor Registration Form. All Rights Reserved | Design by <a href="http://isolutions4u.com/" target="_blank">isolutions4u</a>
     </p>
 </div>
 

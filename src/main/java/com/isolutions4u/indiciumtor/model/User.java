@@ -43,8 +43,8 @@ public class User {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "enable")
-    private boolean enable = true;
+    @Column(name = "enabled")
+    private boolean enabled = true;
 
     public long getId() {
         return id;
@@ -110,11 +110,11 @@ public class User {
         this.role = role;
     }
 
-    public boolean isEnable() {
-        return enable;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnabled(boolean enable) {
+        this.enabled = enable;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RequestMapping("/student")
+@RequestMapping(value = "/student")
 public class StudentController {
 
 

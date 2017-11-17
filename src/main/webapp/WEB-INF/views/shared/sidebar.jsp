@@ -31,7 +31,7 @@
                 <!--end search section-->
             </li>
             <li class="">
-                <a href="${contextRoot }/aboutUs"><i class="fa fa-dashboard fa-fw"></i>About Us</a>
+                <a href="${contextRoot }/student/aboutUs"><i class="fa fa-dashboard fa-fw"></i>About Us</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>

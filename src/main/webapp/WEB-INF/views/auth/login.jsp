@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -18,14 +20,41 @@
 <h1>Login Form</h1>
 <div class="log">
     <div class="content2 w3agile">
-        <h2>Sign Up</h2>
-        <form action="${contextRoot}/login" method="post">
+        <h2>Sign In</h2>
+
+        <c:if test="${not empty message }">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div style="color:honeydew !important;">${message }</div>
+                </div>
+            </div>
+
+        </c:if>
+
+        <c:if test="${not empty logout }">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div style="color:honeydew !important;">${logout }</div>
+                </div>
+            </div>
+
+        </c:if>
+        <c:if test="${not empty successMessage }">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div style="color:honeydew !important;">${successMessage }</div>
+                </div>
+            </div>
+
+        </c:if>
+
+        <form action="${contextRoot}/login" method="post" autocomplete="off">
 
             <div class="form-group">
                 <div class="test1">
                     <label class="control-label col-md-4" for="username">User ID</label></div>
                 <div class="col-md-8">
-                    <input type="email" name="username" class="form-control" placeholder="Enter Email Id"/>
+                    <input autocomplete="false" type="email" name="username" class="form-control" placeholder="Enter Email Id"/>
                 </div>
             </div>
 
@@ -35,7 +64,8 @@
                     <label class="control-label col-md-4" for="password">Password</label></div>
                 <div class="col-md-8">
                     <input type="password" name="password" class="form-control" placeholder="Enter Password"/>
-
+                    <input type="hidden" name="${_csrf.parameterName }"
+                           value="${_csrf.token }"/>
                 </div>
             </div>
 
@@ -43,11 +73,11 @@
 
             <input type="submit" class="sign-in" value="Sign In">
         </form>
-        <h3>Already have an account? <a href="#">Sign In</a></h3>
+        <h3>New Here? <a href="${contextRoot}/registration">Sign Up</a></h3>
     </div>
 </div>
 <div class="footer">
-    <p>© 2017 Indicium Tor Login Form. All Rights Reserved | Design by isolutions4u.com</a>
+    <p>&copy; 2017 Indicium Tor Login Form. All Rights Reserved | Design by <a href="http://isolutions4u.com/" target="_blank">isolutions4u</a>
     </p>
 </div>
 
