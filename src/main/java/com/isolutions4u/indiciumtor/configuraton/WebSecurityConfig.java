@@ -47,14 +47,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.
                 authorizeRequests()
-                .antMatchers("/manage/**").hasAuthority("ADMIN")
-                .antMatchers("/cart/**").hasAuthority("USER")
+                .antMatchers("/student/**").hasAuthority("student")
                 .antMatchers("/**").permitAll()
                 .anyRequest()
                 .authenticated().and().formLogin()
                 .loginPage("/login")
                 .failureUrl("/login?error=true")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/student")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .and().exceptionHandling()

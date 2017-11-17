@@ -21,9 +21,9 @@
             <li class="sidebar-search">
                 <!-- search section-->
                 <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input role="text" class="form-control" placeholder="Search...">
                     <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default" role="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
@@ -105,7 +105,7 @@
                 </ul>
                 <!-- second-level-items -->
             </li>
-            <li class="active">
+            <li class="enable">
                 <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li class="selected">

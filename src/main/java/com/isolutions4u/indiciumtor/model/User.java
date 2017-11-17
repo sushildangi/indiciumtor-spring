@@ -1,7 +1,10 @@
 package com.isolutions4u.indiciumtor.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user_detail")
@@ -13,33 +16,35 @@ public class User {
     private long id;
 
     @Column(name = "first_name")
-    @NotBlank(message="Please Enter First Name!")
+    @NotBlank(message = "First Name is required")
+    @Size(min = 4, message = "Minimum Length is Four Character")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Use letters only please")
     private String firstName;
 
     @Column(name = "last_name")
-    @NotBlank(message="Please Enter Last Name!")
+    @NotBlank(message = "Please Enter Last Name!")
     private String lastName;
 
     @Column(name = "phone")
-    @NotBlank(message="Please Enter Phone Number!")
+    @NotBlank(message = "Please Enter Phone Number!")
     private String phone;
 
     @Column(name = "email")
-    @NotBlank(message="Please Enter Email Id!")
+    @NotBlank(message = "Please Enter Email Id!")
     private String email;
 
     @Column(name = "password")
-    @NotBlank(message="Please Enter Password for Login!")
+    @NotBlank(message = "Please Enter Password for Login!")
     private String password;
 
     @Transient
     private String confirmPassword;
 
-    @Column(name = "type")
-    private String type;
+    @Column(name = "role")
+    private String role;
 
-    @Column(name = "is_active")
-    private boolean active = true;
+    @Column(name = "enable")
+    private boolean enable = true;
 
     public long getId() {
         return id;
@@ -97,19 +102,19 @@ public class User {
         this.confirmPassword = confirmPassword;
     }
 
-    public String getType() {
-        return type;
+    public String getRole() {
+        return role;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public boolean isActive() {
-        return active;
+    public boolean isEnable() {
+        return enable;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setEnable(boolean enable) {
+        this.enable = enable;
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -22,20 +23,6 @@ public class IndexController {
     private UserService userService;
 
 
-    @GetMapping(value = {"/", "/home"})
-    public ModelAndView home() {
-        ModelAndView modelAndView = new ModelAndView("page");
-        modelAndView.addObject("userClickHome", true);
-        return modelAndView;
-    }
-
-
-    @GetMapping("/aboutUs")
-    public ModelAndView aboutUs() {
-        ModelAndView modelAndView = new ModelAndView("page");
-        modelAndView.addObject("userClickAboutUs", true);
-        return modelAndView;
-    }
 
     @GetMapping("/registration")
     public ModelAndView registration() {
@@ -68,6 +55,29 @@ public class IndexController {
         }
         return modelAndView;
     }
+
+
+    /*
+	 * Creating Custom Login Controller
+	 *
+	 *
+	 */
+
+    @GetMapping("/login")
+    public ModelAndView login(@RequestParam(name = "error", required = false) String error,
+                              @RequestParam(name = "logout", required = false) String logout) {
+        ModelAndView modelAndView = new ModelAndView("/auth/login");
+        if (error != null) {
+            modelAndView.addObject("message", "Invalid User Name or Password!");
+        }
+        if (logout != null) {
+            modelAndView.addObject("logout", "User has Successfully Logged out!");
+        }
+        modelAndView.addObject("title", "Login");
+
+        return modelAndView;
+    }
+
 
 
 }
