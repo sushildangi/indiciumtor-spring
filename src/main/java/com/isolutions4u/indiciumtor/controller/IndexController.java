@@ -71,6 +71,15 @@ public class IndexController {
             user.setPassword("");
 
         }
+
+        userExists = userService.findUserByPhone(user.getPhone());
+
+        if (userExists != null) {
+            bindingResult
+                    .rejectValue("phone", "error.user",
+                            "There is already a user registered with the phone provided");
+        }
+
         if (bindingResult.hasErrors()) {
             modelAndView.setViewName("/auth/registration");
         } else {
