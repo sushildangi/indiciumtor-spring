@@ -26,7 +26,8 @@
                     <label class="control-label col-md-4" for="firstName">First Name</label></div>
                 <div class="col-md-8">
                     <sf:input path="firstName" type="text" class="form-control" placeholder="Enter First Name"/>
-                    <sf:errors path="firstName" cssClass="help-block"
+                    <br>
+                    <sf:errors path="firstName" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -37,7 +38,8 @@
                     <label class="control-label col-md-4" for="lastName">Last Name</label></div>
                 <div class="col-md-8">
                     <sf:input path="lastName" type="text" class="form-control" placeholder="Enter Last Name"/>
-                    <sf:errors path="lastName" cssClass="help-block"
+                    <br>
+                    <sf:errors path="lastName" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -47,7 +49,8 @@
                     <label class="control-label col-md-4" for="phone">Phone Number</label></div>
                 <div class="col-md-8">
                     <sf:input path="phone" type="tel" class="form-control" placeholder="Enter Phone Number"/>
-                    <sf:errors path="phone" cssClass="help-block"
+                    <br>
+                    <sf:errors path="phone" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -57,7 +60,8 @@
                     <label class="control-label col-md-4" for="email">EMail</label></div>
                 <div class="col-md-8">
                     <sf:input path="email" type="email" class="form-control" placeholder="Enter EMail Id"/>
-                    <sf:errors path="email" cssClass="help-block"
+                    <br>
+                    <sf:errors path="email" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -68,7 +72,8 @@
                     <label class="control-label col-md-4" for="password">Password</label></div>
                 <div class="col-md-8">
                     <sf:input path="password" type="password" class="form-control" placeholder="Enter Password"/>
-                    <sf:errors path="password" cssClass="help-block"
+                    <br>
+                    <sf:errors path="password" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -79,7 +84,8 @@
                     <label class="control-label col-md-4" for="confirmPassword">Confirm Password</label></div>
                 <div class="col-md-8">
                     <sf:input path="confirmPassword" type="password" class="form-control" placeholder="ReEnter Password"/>
-                    <sf:errors path="confirmPassword" cssClass="help-block"
+                    <br>
+                    <sf:errors path="confirmPassword" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -93,7 +99,7 @@
                         <sf:option value="alumni">alumni</sf:option>
                         <sf:option value="faculty">faculty</sf:option>
                     </sf:select>
-                    <errors path="role" cssClass="help-block"
+                    <errors path="role" cssStyle="color: honeydew"
                             element="em"/>
                 </div>
             </div>
@@ -105,7 +111,7 @@
     </div>
 </div>
 <div class="footer">
-    <p>© 2016 Social Login Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a>
+    <p>© 2017 Indicium Tor Registration Form. All Rights Reserved | Design by <a href="http://isolutions4u.com/" target="_blank">isolutions4u</a>
     </p>
 </div>
 
