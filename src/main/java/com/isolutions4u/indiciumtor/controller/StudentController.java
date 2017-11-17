@@ -15,6 +15,7 @@ public class StudentController {
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView("page");
         modelAndView.addObject("userClickHome", true);
+        modelAndView.addObject("title", "Home");
         return modelAndView;
     }
 
@@ -23,6 +24,7 @@ public class StudentController {
     public ModelAndView aboutUs() {
         ModelAndView modelAndView = new ModelAndView("page");
         modelAndView.addObject("userClickAboutUs", true);
+        modelAndView.addObject("title", "About Us");
         return modelAndView;
     }
 }

@@ -10,7 +10,7 @@
                         <img src="${contextRoot }/static/assets/img/user.jpg" alt="">
                     </div>
                     <div class="user-info">
-                        <div>Jonny <strong>Deen</strong></div>
+                        <div>Sushil <strong>Dangi</strong></div>
                         <div class="user-text-online">
                             <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                         </div>
@@ -30,7 +30,7 @@
                 </div>
                 <!--end search section-->
             </li>
-            <li class="">
+            <li id="aboutUs">
                 <a href="${contextRoot }/student/aboutUs"><i class="fa fa-dashboard fa-fw"></i>About Us</a>
             </li>
             <li>
