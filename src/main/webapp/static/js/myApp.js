@@ -5,6 +5,9 @@ $(function() {
         case 'About Us':
             $('#aboutUs').addClass('selected');
             break;
+        case 'View Profile':
+            $('#viewProfile').addClass('selected');
+            break;
         default:
             break;
     }

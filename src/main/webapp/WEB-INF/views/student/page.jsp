@@ -20,6 +20,7 @@
         window.menu = '${title }';
         window.contextRoot = '${contextRoot}'
     </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link href="${contextRoot }/static/assets/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
     <link href="${contextRoot }/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
@@ -34,27 +35,36 @@
 <div id="wrapper">
     <!-- navbar top -->
 
-    <%@include file="shared/navbar.jsp" %>
+    <%@include file="../shared/navbar.jsp" %>
 
     <!-- end navbar top -->
 
     <!-- sidebar side -->
 
-    <%@include file="shared/sidebar.jsp" %>
+    <%@include file="../shared/sidebar.jsp" %>
 
     <!-- end navbar side -->
 
 
     <!--  page-wrapper -->
 
+    <!-- Home Page -->
+
     <c:if test="${userClickHome == true }">
-        <%@include file="blankPage.jsp"%>
+        <%@include file="blankPage.jsp" %>
     </c:if>
+
+    <!-- View Profile Page -->
+
+    <c:if test="${userClickViewProfile == true }">
+        <%@include file="viewProfile.jsp" %>
+    </c:if>
+
+    <!-- About Us Page -->
 
     <c:if test="${userClickAboutUs == true }">
-        <%@include file="AboutUs.jsp"%>
+        <%@include file="aboutUs.jsp" %>
     </c:if>
-
 
 
     <!-- end page-wrapper -->

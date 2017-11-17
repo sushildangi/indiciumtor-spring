@@ -30,9 +30,18 @@
                 </div>
                 <!--end search section-->
             </li>
-            <li id="aboutUs">
-                <a href="${contextRoot }/student/aboutUs"><i class="fa fa-dashboard fa-fw"></i>About Us</a>
+
+            <!-- View Profile Side Menu -->
+            <li id="viewProfile">
+                <a href="${contextRoot }/student/viewProfile"><i class="fa fa-user fa-fw"></i>My Profile</a>
             </li>
+
+            <!-- About Us Side Menu -->
+            <li id="aboutUs">
+                <a href="${contextRoot }/student/aboutUs"><i class="fa fa-building-o fa-fw"></i>About Us</a>
+            </li>
+
+
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
