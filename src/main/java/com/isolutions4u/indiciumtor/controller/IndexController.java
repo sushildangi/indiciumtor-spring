@@ -23,12 +23,26 @@ public class IndexController {
     private UserService userService;
 
 
-
     @GetMapping("/registration")
     public ModelAndView registration() {
         ModelAndView modelAndView = new ModelAndView("/auth/registration");
         User user = new User();
         modelAndView.addObject("user", user);
+
+        return modelAndView;
+    }
+
+    @GetMapping("/login")
+    public ModelAndView login(@RequestParam(name = "error", required = false) String error,
+                              @RequestParam(name = "logout", required = false) String logout) {
+        ModelAndView modelAndView = new ModelAndView("/auth/login");
+        if (error != null) {
+            modelAndView.addObject("message", "Invalid User Name or Password!");
+        }
+        if (logout != null) {
+            modelAndView.addObject("logout", "User has Successfully Logged out!");
+        }
+        modelAndView.addObject("title", "Login");
 
         return modelAndView;
     }
@@ -55,29 +69,6 @@ public class IndexController {
         }
         return modelAndView;
     }
-
-
-    /*
-	 * Creating Custom Login Controller
-	 *
-	 *
-	 */
-
-    @GetMapping("/login")
-    public ModelAndView login(@RequestParam(name = "error", required = false) String error,
-                              @RequestParam(name = "logout", required = false) String logout) {
-        ModelAndView modelAndView = new ModelAndView("/auth/login");
-        if (error != null) {
-            modelAndView.addObject("message", "Invalid User Name or Password!");
-        }
-        if (logout != null) {
-            modelAndView.addObject("logout", "User has Successfully Logged out!");
-        }
-        modelAndView.addObject("title", "Login");
-
-        return modelAndView;
-    }
-
 
 
 }

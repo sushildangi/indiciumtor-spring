@@ -7,11 +7,11 @@
 <head>
     <title>Indicium Tor | Registration Form</title>
     <!-- font files  -->
-    <link href='//fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' role='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' role='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
     <!-- /font files  -->
     <!-- css files -->
-    <link href="${contextRoot}/static/css/style.css" rel='stylesheet' role='text/css' media="all"/>
+    <link href="${contextRoot}/static/css/style.css" rel='stylesheet' type='text/css' media="all"/>
     <!-- /css files -->
 </head>
 <body>
